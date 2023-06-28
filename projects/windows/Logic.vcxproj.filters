@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Values">
+      <UniqueIdentifier>{5e5ceed6-56f4-4e8c-b1b8-b778801b44a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{7181789e-9070-4f61-9fcb-337bf43fa7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Modules">
+      <UniqueIdentifier>{6b0b6c93-2b1c-4c98-ac5a-2234f2976cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys">
+      <UniqueIdentifier>{0079a872-428b-444a-ae26-366a67aae2fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\Debugger">
+      <UniqueIdentifier>{ebbfb855-315e-438a-a5a0-a1880431f362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\ThirdParty">
+      <UniqueIdentifier>{0f69f53b-539a-4384-8d15-4fd4fdb0771a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\ThirdParty\Jsoncpp">
+      <UniqueIdentifier>{46a9b934-25fa-4361-8b9d-18f381b98eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\ThirdParty\Jsoncpp\json">
+      <UniqueIdentifier>{460a33a1-f7cd-45dd-8930-b46252d93c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\Net">
+      <UniqueIdentifier>{82afc633-b184-4114-b8e4-8e2a2e5cbd6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Stack">
+      <UniqueIdentifier>{a4c5ddac-b263-417b-903b-198948ce90ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{e65bcb01-7999-4fa0-9a9d-58fc9bd3d6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{28fbb219-a3c6-477a-babb-4b6e1c7130a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Axioms">
+      <UniqueIdentifier>{c4c97ca3-7253-4030-9cf3-5c1a82583266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Modules\Mind">
+      <UniqueIdentifier>{c4ebd2c0-f037-4981-90f7-0dbf6601cc1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\ThirdParty\VF2">
+      <UniqueIdentifier>{3c954ca3-b09e-41f7-8582-97a78eefcd45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\OTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Senses.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\Edge.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\Graph.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\GraphClass.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\GraphManager.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\Node.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Module.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\ModuleFunction.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\ModuleManager.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\System.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Stack\StackFrame.h">
+      <Filter>Script\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Debugger\Debugger.h">
+      <Filter>Sys\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerClient.h">
+      <Filter>Sys\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerMessenger.h">
+      <Filter>Sys\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerVSCode.h">
+      <Filter>Sys\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Net\TCPServer.h">
+      <Filter>Sys\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_batchallocator.h">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_tool.h">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\assertions.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\autolink.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\config.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\features.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\forwards.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\json.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\reader.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\value.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\version.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\writer.h">
+      <Filter>Sys\ThirdParty\Jsoncpp\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\Value.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueArr.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueBase.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueEdge.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueFloat.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueGraph.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueIndexRef.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueLogic.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueManager.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueNode.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueNone.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueStr.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ErrorManager.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Singletone.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Trace.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Utils.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Application.h" />
+    <ClInclude Include="..\..\src\Compiler.h" />
+    <ClInclude Include="..\..\src\Parser.h" />
+    <ClInclude Include="..\..\src\Script\Code.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Command.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Expr.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Function.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Script.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Source.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Variable.h">
+      <Filter>Script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\Net\TCPServerWin.h">
+      <Filter>Sys\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\MathModule.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Config.h" />
+    <ClInclude Include="..\..\src\Values\ValueRef.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueFile.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueFus.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueMap.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Logic.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\FusNumber.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Axioms\Atom.h">
+      <Filter>Axioms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Axioms\Axiom.h">
+      <Filter>Axioms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueLambda.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Values\ValueSVG.h">
+      <Filter>Values</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\SVGModule.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\FileModule.h">
+      <Filter>Script\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\Mind.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindModule.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindDemon.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindNames.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindGraphModel.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindState.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindTransaction.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindVarAxiom.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindVarAtom.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAtom.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAxiom.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAxioms.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindLiteral.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindMerge.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindMergeItem.h">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2.h">
+      <Filter>Sys\ThirdParty\VF2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2Graph.h">
+      <Filter>Sys\ThirdParty\VF2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2Head.h">
+      <Filter>Sys\ThirdParty\VF2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Graph\GraphInvariants.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\Senses.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\Edge.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\Graph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\GraphClass.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\GraphManager.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\Node.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Module.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\ModuleFunction.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\ModuleManager.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\System.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Stack\StackFrame.cpp">
+      <Filter>Script\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Debugger\Debugger.cpp">
+      <Filter>Sys\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerClient.cpp">
+      <Filter>Sys\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerMessenger.cpp">
+      <Filter>Sys\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerVSCode.cpp">
+      <Filter>Sys\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Net\TCPServer.cpp">
+      <Filter>Sys\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_reader.cpp">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_value.cpp">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_writer.cpp">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\Value.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueArr.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueBase.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueEdge.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueFloat.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueGraph.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueIndexRef.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueLogic.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueManager.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueNode.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueNone.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueStr.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ErrorManager.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Trace.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Utils.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Application.cpp" />
+    <ClCompile Include="..\..\src\Compiler.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Parser.cpp" />
+    <ClCompile Include="..\..\src\Script\Code.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Command.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Expr.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Function.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Script.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Source.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Variable.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\Net\TCPServerWin.cpp">
+      <Filter>Sys\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\MathModule.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueRef.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueFile.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueFus.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueMap.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Logic.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\FusNumber.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Axioms\Atom.cpp">
+      <Filter>Axioms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Axioms\Axiom.cpp">
+      <Filter>Axioms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueLambda.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Values\ValueSVG.cpp">
+      <Filter>Values</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\SVGModule.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\FileModule.cpp">
+      <Filter>Script\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\Mind.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindModule.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindNames.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindDemon.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindGraphModel.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindState.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindTransaction.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindVarAxiom.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindVarAtom.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAtom.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAxiom.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAxioms.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindLiteral.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindMerge.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindMergeItem.cpp">
+      <Filter>Script\Modules\Mind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ThirdParty\VF2\VF2.cpp">
+      <Filter>Sys\ThirdParty\VF2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sys\ThirdParty\VF2\VF2Graph.cpp">
+      <Filter>Sys\ThirdParty\VF2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Graph\GraphInvariants.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_internalarray.inl">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </None>
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_internalmap.inl">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </None>
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_valueiterator.inl">
+      <Filter>Sys\ThirdParty\Jsoncpp</Filter>
+    </None>
+  </ItemGroup>
+</Project>

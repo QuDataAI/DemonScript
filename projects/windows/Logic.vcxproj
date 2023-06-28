@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\FusNumber.h" />
+    <ClInclude Include="..\..\..\Common\Logic.h" />
+    <ClInclude Include="..\..\..\Common\OTypes.h" />
+    <ClInclude Include="..\..\..\Common\Senses.h" />
+    <ClInclude Include="..\..\src\Application.h" />
+    <ClInclude Include="..\..\src\Axioms\Atom.h" />
+    <ClInclude Include="..\..\src\Axioms\Axiom.h" />
+    <ClInclude Include="..\..\src\Compiler.h" />
+    <ClInclude Include="..\..\src\Config.h" />
+    <ClInclude Include="..\..\src\Graph\Edge.h" />
+    <ClInclude Include="..\..\src\Graph\Graph.h" />
+    <ClInclude Include="..\..\src\Graph\GraphClass.h" />
+    <ClInclude Include="..\..\src\Graph\GraphInvariants.h" />
+    <ClInclude Include="..\..\src\Graph\GraphManager.h" />
+    <ClInclude Include="..\..\src\Graph\Node.h" />
+    <ClInclude Include="..\..\src\Parser.h" />
+    <ClInclude Include="..\..\src\Script\Code.h" />
+    <ClInclude Include="..\..\src\Script\Command.h" />
+    <ClInclude Include="..\..\src\Script\Expr.h" />
+    <ClInclude Include="..\..\src\Script\Function.h" />
+    <ClInclude Include="..\..\src\Script\Modules\FileModule.h" />
+    <ClInclude Include="..\..\src\Script\Modules\MathModule.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\Mind.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAtom.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAxiom.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindAxioms.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindLiteral.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindMerge.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindMergeItem.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindVarAtom.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindVarAxiom.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindState.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindDemon.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindGraphModel.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindModule.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindNames.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Mind\MindTransaction.h" />
+    <ClInclude Include="..\..\src\Script\Modules\Module.h" />
+    <ClInclude Include="..\..\src\Script\Modules\ModuleFunction.h" />
+    <ClInclude Include="..\..\src\Script\Modules\ModuleManager.h" />
+    <ClInclude Include="..\..\src\Script\Modules\SVGModule.h" />
+    <ClInclude Include="..\..\src\Script\Modules\System.h" />
+    <ClInclude Include="..\..\src\Script\Script.h" />
+    <ClInclude Include="..\..\src\Script\Source.h" />
+    <ClInclude Include="..\..\src\Script\Stack\StackFrame.h" />
+    <ClInclude Include="..\..\src\Script\Variable.h" />
+    <ClInclude Include="..\..\src\Sys\Debugger\Debugger.h" />
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerClient.h" />
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerMessenger.h" />
+    <ClInclude Include="..\..\src\Sys\Debugger\DebuggerVSCode.h" />
+    <ClInclude Include="..\..\src\Sys\ErrorManager.h" />
+    <ClInclude Include="..\..\src\Sys\Net\TCPServer.h" />
+    <ClInclude Include="..\..\src\Sys\Net\TCPServerWin.h" />
+    <ClInclude Include="..\..\src\Sys\Singletone.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\assertions.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\autolink.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\config.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\features.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\forwards.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\json.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\reader.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\value.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\version.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json\writer.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_batchallocator.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_tool.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2Graph.h" />
+    <ClInclude Include="..\..\src\Sys\ThirdParty\VF2\VF2Head.h" />
+    <ClInclude Include="..\..\src\Sys\Trace.h" />
+    <ClInclude Include="..\..\src\Sys\Utils.h" />
+    <ClInclude Include="..\..\src\Values\Value.h" />
+    <ClInclude Include="..\..\src\Values\ValueArr.h" />
+    <ClInclude Include="..\..\src\Values\ValueBase.h" />
+    <ClInclude Include="..\..\src\Values\ValueEdge.h" />
+    <ClInclude Include="..\..\src\Values\ValueLambda.h" />
+    <ClInclude Include="..\..\src\Values\ValueFile.h" />
+    <ClInclude Include="..\..\src\Values\ValueFloat.h" />
+    <ClInclude Include="..\..\src\Values\ValueFus.h" />
+    <ClInclude Include="..\..\src\Values\ValueGraph.h" />
+    <ClInclude Include="..\..\src\Values\ValueIndexRef.h" />
+    <ClInclude Include="..\..\src\Values\ValueLogic.h" />
+    <ClInclude Include="..\..\src\Values\ValueManager.h" />
+    <ClInclude Include="..\..\src\Values\ValueMap.h" />
+    <ClInclude Include="..\..\src\Values\ValueNode.h" />
+    <ClInclude Include="..\..\src\Values\ValueNone.h" />
+    <ClInclude Include="..\..\src\Values\ValueRef.h" />
+    <ClInclude Include="..\..\src\Values\ValueStr.h" />
+    <ClInclude Include="..\..\src\Values\ValueSVG.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\FusNumber.cpp" />
+    <ClCompile Include="..\..\..\Common\Logic.cpp" />
+    <ClCompile Include="..\..\..\Common\Senses.cpp" />
+    <ClCompile Include="..\..\src\Application.cpp" />
+    <ClCompile Include="..\..\src\Axioms\Atom.cpp" />
+    <ClCompile Include="..\..\src\Axioms\Axiom.cpp" />
+    <ClCompile Include="..\..\src\Compiler.cpp" />
+    <ClCompile Include="..\..\src\Graph\Edge.cpp" />
+    <ClCompile Include="..\..\src\Graph\Graph.cpp" />
+    <ClCompile Include="..\..\src\Graph\GraphClass.cpp" />
+    <ClCompile Include="..\..\src\Graph\GraphInvariants.cpp" />
+    <ClCompile Include="..\..\src\Graph\GraphManager.cpp" />
+    <ClCompile Include="..\..\src\Graph\Node.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Parser.cpp" />
+    <ClCompile Include="..\..\src\Script\Code.cpp" />
+    <ClCompile Include="..\..\src\Script\Command.cpp" />
+    <ClCompile Include="..\..\src\Script\Expr.cpp" />
+    <ClCompile Include="..\..\src\Script\Function.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\FileModule.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\MathModule.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\Mind.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAtom.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAxiom.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindAxioms.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindLiteral.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindMerge.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindMergeItem.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindVarAtom.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindVarAxiom.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindState.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindDemon.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindGraphModel.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindModule.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindNames.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Mind\MindTransaction.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\Module.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\ModuleFunction.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\ModuleManager.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\SVGModule.cpp" />
+    <ClCompile Include="..\..\src\Script\Modules\System.cpp" />
+    <ClCompile Include="..\..\src\Script\Script.cpp" />
+    <ClCompile Include="..\..\src\Script\Source.cpp" />
+    <ClCompile Include="..\..\src\Script\Stack\StackFrame.cpp" />
+    <ClCompile Include="..\..\src\Script\Variable.cpp" />
+    <ClCompile Include="..\..\src\Sys\Debugger\Debugger.cpp" />
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerClient.cpp" />
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerMessenger.cpp" />
+    <ClCompile Include="..\..\src\Sys\Debugger\DebuggerVSCode.cpp" />
+    <ClCompile Include="..\..\src\Sys\ErrorManager.cpp" />
+    <ClCompile Include="..\..\src\Sys\Net\TCPServer.cpp" />
+    <ClCompile Include="..\..\src\Sys\Net\TCPServerWin.cpp" />
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_reader.cpp" />
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_value.cpp" />
+    <ClCompile Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_writer.cpp" />
+    <ClCompile Include="..\..\src\Sys\ThirdParty\VF2\VF2.cpp" />
+    <ClCompile Include="..\..\src\Sys\ThirdParty\VF2\VF2Graph.cpp" />
+    <ClCompile Include="..\..\src\Sys\Trace.cpp" />
+    <ClCompile Include="..\..\src\Sys\Utils.cpp" />
+    <ClCompile Include="..\..\src\Values\Value.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueArr.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueBase.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueEdge.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueLambda.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueFile.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueFloat.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueFus.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueGraph.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueIndexRef.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueLogic.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueManager.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueMap.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueNode.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueNone.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueRef.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueStr.cpp" />
+    <ClCompile Include="..\..\src\Values\ValueSVG.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_internalarray.inl" />
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_internalmap.inl" />
+    <None Include="..\..\src\Sys\ThirdParty\Jsoncpp\json_valueiterator.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F8A8A92A-B6C6-447D-A455-A8468DDD6245}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Logic</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\..\data\</OutDir>
+    <TargetName>ds</TargetName>
+    <IntDir>$(ProjectDir)\build\debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\..\data\</OutDir>
+    <TargetName>ds</TargetName>
+    <IntDir>$(ProjectDir)\build\debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\..\data\</OutDir>
+    <TargetName>ds</TargetName>
+    <IntDir>$(ProjectDir)\build\release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\..\data\</OutDir>
+    <TargetName>ds</TargetName>
+    <IntDir>$(ProjectDir)\build\release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\..\Common;$(ProjectDir)\..\..\src;$(ProjectDir)\..\..\src\Values;$(ProjectDir)\..\..\src\Graph;$(ProjectDir)\..\..\src\Script;$(ProjectDir)\..\..\src\Sys</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>16777216</StackReserveSize>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\..\Common;$(ProjectDir)\..\..\src;$(ProjectDir)\..\..\src\Values;$(ProjectDir)\..\..\src\Graph;$(ProjectDir)\..\..\src\Script;$(ProjectDir)\..\..\src\Sys</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\..\Common;$(ProjectDir)\..\..\src;$(ProjectDir)\..\..\src\Values;$(ProjectDir)\..\..\src\Graph;$(ProjectDir)\..\..\src\Script;$(ProjectDir)\..\..\src\Sys</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>16777216</StackReserveSize>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\..\Common;$(ProjectDir)\..\..\src;$(ProjectDir)\..\..\src\Values;$(ProjectDir)\..\..\src\Graph;$(ProjectDir)\..\..\src\Script;$(ProjectDir)\..\..\src\Sys</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
