@@ -1,0 +1,184 @@
+// Перевозка голодных волка, козы и капусты из одного места на другое.
+/*
+Если волк и коза находятся в одном месте без фермера, то волк съедает козу.
+Аналогичная, ситуация для козы и капусты. Первоначально все находятся в месте $1.
+Фермеру необходимо перевезти волка, козу и капусту в место $2 без потери козы и капусты.
+Для перевозки он может взять только один объект.
+Места $1 и $2 могут быть связаны непосредственно или через граф других мест.
+*/
+edges on,   hold                                 // находится в месте, иметь объект
+edges want                                       // хотеть съесть
+edges link                                       // два места связаны
+
+var Sen = GRAPH("Sen")                           // граф абстрактных классов
+Sen.nodes $human, $animal, $place                // человек, животное, место
+global Sen                                       // граф будет доступен в демонах
+
+var Start = GRAPH("Start")                       // граф начального состояния
+Start.verbose(0)                                 // нет вывода информации об изменении рёбер
+GRAPH = Start;
+nodes f, w, g, c;                                // фермер, волк, коза, капуста
+nodes $1, $2;                                    // различные места мира
+
+[f]     isa Sen=>$human;                         // принадлежность к классам
+[w,g,c] isa Sen=>$animal;
+[$1,$2] isa Sen=>$place;
+
+w  want g;  g  want c;                           // кто кого хочет
+$1 link $2; $2 link $1;                          // геометрия мира: 1<->2
+
+//---------------------------------------------------------------------------------------
+
+for X in X.isa(Sen=>$human) | X.isa(Sen=>$animal):
+   X on $1;                                      // все в месте $1
+
+//---------------------------------------------------------------------------------------
+// Возвращает место где находится объект X в состоянии (графе) G
+//
+def place(G, X)
+{
+   GRAPH = G
+   if exists(Z, X on Z) : return Z
+}
+//---------------------------------------------------------------------------------------
+// Человек H берёт объект A в состоянии G. Если это невозможно return False, иначе True
+//
+def take(G, H, A)
+{
+   GRAPH = G
+   if exists(Z, H hold Z)    : return False       // H уже кого-то носит
+   var P = place(G, H)                            // место, где находится человек H
+   if (A on P) != True       : return False       // H и A в разных местах
+
+   H hold A;                                      // человек берёт A
+   A on P  = Undef                                // A уже не в P (а у человека)
+   return True
+}
+//---------------------------------------------------------------------------------------
+// Человек H кладёт объект, который имеет в состоянии G. Если это невозможно return False
+//
+def put(G, H)
+{
+   GRAPH = G
+   if !exists(Z, H hold Z)  : return False        // никого не носит
+
+   H hold Z = Undef;                              // человек теперь не имеет Z
+   var P = place(G, H);
+   Z on P;                                        // Z там же, где человек
+   return True
+}
+//---------------------------------------------------------------------------------------
+// Человек H переходит в место P2 в состоянии G. Если это невозможно return False
+//
+def move(G, H, P2)
+{
+   GRAPH = G
+   var P1 = place(G, H)                           // где сейчас находится человек H
+   if P1 == P2             : return False         // уже тут и находится
+   if (P1 link P2) != True : return False         // нет пути P1 -> P2
+
+   // если людей больше в P1 нет:
+   if !exists(F, F.isa(Sen=>$human) & (F on P1) & F != H) :             
+      for A in A.isa(Sen=>$animal){               // по всем носимым животным
+         if (A on P1) != True : continue           
+         for B in (A want B) & (B on P1) : 
+            return False                          // нельзя оставлять голодных животных
+      }
+
+   H on P1 = Undef;                               // покидаем P1
+   H on P2;                                       // переезжаем в P2
+   return True
+}
+//---------------------------------------------------------------------------------------
+// В состоянии G породить массив состояния для всех возможных действий людей
+//
+def all_actions(G)
+{
+   var Graphs = []
+   var Next = G.copy(); GRAPH = G
+   for H in H.isa(Sen=>$human) {                  // по всем людям
+      if put(Next, H) {                           // может положить, что имеет
+         Next.name(Next.name()+";"+H.string()+".p");  
+         Graphs.push(Next)
+         Next = G.copy()
+      }
+      for A in A.isa(Sen=>$animal) :              // по всем животным
+         if take(Next, H, A) {                    // его можно взять
+            Next.name(Next.name()+";"+H.string()+".t."+A.string()); 
+            Graphs.push(Next)
+            Next = G.copy()
+         }
+      for P in P.isa(Sen=>$place) :               // по всем местам
+         if move(Next, H, P) {                    // туда можно перейти
+           Next.name(Next.name()+";"+H.string()+".m."+P.string());  
+           Graphs.push(Next)
+           Next = G.copy()
+         }
+      }
+   return Graphs
+}
+//---------------------------------------------------------------------------------------
+// Возвращает True, если состояние G является целевым
+//
+def target_state(G)
+{
+   GRAPH = G
+   for X in X.isa(Sen=>$human) | X.isa(Sen=>$animal) {
+      if (X on $2) != True  : return False        // не все на финальном месте
+      if exists(Z, X hold Z): return False        // некоторые не положены
+   }   
+   return True
+}
+//---------------------------------------------------------------------------------------
+// Поиск кратчайшего решения в ширину
+//
+def solver(Start)
+{
+   var Open  = [];                                // очередь состояний для обследования
+   var Close = [];                                // состояния в которых уже были
+
+   Open.push(Start);                              // помещаем стартовое
+   Close.push(Start);                               
+   while !Open.empty() {                          // пока очередь не пустая 
+      var G = Open.pop()                          // извлекаем из конца
+      //out "G:", G.name()
+      var Gs = all_actions(G)                     // графы после всех возможных действий
+      for Gi in Gs {                              // бежим по ним
+         //out "Gi:", Gi.name()
+         if target_state(Gi) {                    // это целевое состояние
+            out "Close:",Close.size(),Open.size()
+            return Gi                           // конец поиска
+            //out Gi.name(); Close.push(Gi); continue// все решения
+         }
+         if Close.is(Gi) :                        // в этом состоянии уже были
+            continue
+         Open.unshift(Gi)                         // в начало очереди (поиск в ширину)
+         Close.push(Gi)                           // запоминаем, что уже были
+      }
+      //out Close.size(), Open.size()
+   }
+}
+
+/*
+var G = Start.copy("G")
+take(G, f, w); put(G, f)
+out Start
+out G
+out G == Start
+*/
+
+var Finish = solver(Start)                        // запускаем решатель
+out  Finish==Undef ? "Can't find solution" : Finish.name()
+
+/*
+GRAPH = Start
+nodes s
+s isa Sen=>$human = True
+s on $1 = True
+
+out Start
+
+var Finish = solver(Start)
+out  Finish==Undef ? "Can't find solution" : Finish.name()
+out "buy"
+*/
